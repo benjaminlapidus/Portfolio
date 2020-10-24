@@ -1,0 +1,333 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#splash-section {
+	background:#18a22a;
+	background:linear-gradient(214deg,rgba(24,162,42,1) 0%,rgba(56,218,76,1) 100%);
+}
+
+#etms-section {
+background:#e8cd0b;
+background:linear-gradient(214deg,rgba(255,227,25,1) 0%,rgba(232,205,11,1) 0%,);
+}
+
+#wcsa-section {
+background:#61c2ff;
+background:linear-gradient(214deg,rgba(97,194,255,1) 0%,rgba(18,145,224,1) 100%);
+}
+
+#revolutionary-section {
+background:#fc60ff;
+background:linear-gradient(214deg,rgba(252,96,255,1) 0%,rgba(249,152,251,1) 100%);
+}
+
+#spoton-section {
+background:#fc60ff;
+background:linear-gradient(214deg,rgba(252,96,255,1) 0%,rgba(249,152,251,1) 100%);
+}
+
+#design-section {
+background:#e8cd0b;
+background:linear-gradient(214deg,rgba(255,227,25,1) 0%,rgba(232,205,11,1) 0%,);
+}
+
+#splash-title {
+  color: #37d94b;
+}
+
+#spoton-title {
+  color: #fc60ff;
+}
+
+#etms-title {
+  color:#e8cd0b;
+}
+
+#wcsa-title {
+  color:#61c2ff;
+}
+
+#revolutionary-title {
+  color:#fc60ff;
+}
+
+#design-title {
+  color:#e8cd0b;
+}
+
+.title-wrapper {
+	font-size: 2.5em;
+}
+
+body {
+	width: 100%;
+	max-width: 1680px;
+	margin: 0 auto;
+	font-family: "Raleway","sans-serif";
+	background-color: #323232;
+}
+
+.head-content {
+	min-height: 590px;
+	overflow: auto;
+  position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+.center-wrapper {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 600px;
+}
+
+
+.description-wrapper {
+	margin-top: 12px;
+	color: white;
+}
+
+.tags {
+	font-size: 1.0em;
+	margin-top: 24px;
+
+}
+
+.content-description {
+	font-size: 1.4em;
+
+
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: flex-start; 
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.flex-child {
+	flex: 1 0 auto;
+	max-width: 50%;
+}
+
+.right {
+	background-color: #e3e3e3;
+	padding: 24px;
+}
+
+.left {
+	font-size: 1.9em;
+	line-height: 170%;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+}
+
+.pastel-wrapper {
+	padding: 96px 96px 96px 96px;
+}
+
+.pastel-button {
+  margin-top: 32px;
+  font-size: 120%;
+  padding: 10px;
+}
+
+.pastel-button a {
+  color: white;
+  font-size: 80%;
+  border: solid 3px white;
+  padding: 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.pastel-button a:hover {
+  letter-spacing: 1px;
+  border: solid 6px white;
+
+}
+
+
+.head-b-wrapper {
+	margin-top: 96px;
+}
+
+.head-b-generate-quiz {
+	font-size: 1.2em;
+	padding: 24px;
+	background-color: #323232;
+	border-radius: 10px;
+	font-weight: 700;
+	color: #f6f6f6;
+	margin-top: 0;
+	transition: all .5s ease;
+	margin: 12px;
+}
+
+#home-button {
+	border: solid 3px #464646;
+}
+
+#home-button:hover {
+	border: solid 3px #696969;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: auto;
+  align-content: start;
+  height: 100%;
+}
+.image-item {
+  flex: 0 0 auto;
+  margin: 5px;
+  max-width: 300px;
+  max-height: 300px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.design-item {
+  flex: 0 0 auto;
+  margin: 24px;
+  max-width: 300px;
+  max-height: 300px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.image-item:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wcsa-image {
+  max-height: 400px;
+  margin: 10px;
+}
+/* Modal Images from: https://www.w3schools.com/howto/howto_js_lightbox.asp */
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+	.flex-container { 
+	flex-direction: column;
+}
+
+.flex-child {
+	flex: 1 0 auto;
+	max-width: 100%;
+}
+}
+
+@media (max-width: 625px) {
+.center-wrapper {
+	width: 280px;
+}
+
+.title-wrapper {
+	font-size: 1.3em;
+}
+.pastel-wrapper {
+	padding: 5px;
+}
+}
+
+
+
+@media (max-width: 299px) {
+.center-wrapper {
+	width: 225px;
+}
+
+.title-wrapper {
+	font-size: 1.0em;
+}
+
+.head-b-wrapper {
+	margin-top: 48px;
+}
+}
