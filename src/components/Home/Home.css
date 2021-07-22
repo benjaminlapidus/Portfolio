@@ -1,0 +1,296 @@
+h1 {
+  font-size: 4em;
+  font-family: "OPTIPeach", serif;
+  color: #fff;
+}
+
+h2 {
+  font-size: 3.5em;
+  color: #ea7975;
+  font-family: "OPTIPeach", serif;
+}
+
+h3 {
+  font-size: 3em;
+  color: #fff;
+  font-family: "OPTIPeach", serif;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-family: "OPTIPeach", serif;
+  font-size: 3.5em;
+}
+
+.Home {
+  margin: 4em 0px;
+  width: 50%;
+  margin-bottom: 25vh;
+}
+
+.home__description {
+  margin: 2em 0px;
+}
+
+p {
+  margin: 24px 0px;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+span {
+  color: #ea7975;
+  font-weight: bold;
+}
+
+.btn-1 {
+  background-color: #ea7975;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 16px 24px;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: auto;
+  position: relative;
+  text-decoration: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.button-wrapper {
+  margin-top: 64px;
+}
+
+.btn-1:hover {
+  transition: all 0.5s;
+  border-radius: 10px;
+  transform: scale(0.98);
+  box-shadow: rgb(38, 57, 77) 0px 12px 22px -10px;
+}
+
+.button-icon {
+  display: none;
+}
+
+.button-icon:hover {
+  display: initial;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+ol li::before {
+  content: "" counter(my-awesome-counter);
+  font-weight: bold;
+  position: absolute;
+  z-index: -1;
+  font-size: 20rem;
+  margin-left: -8rem;
+  font-family: "Abril Fatface", serif;
+  line-height: 450px;
+  color: #5a9981;
+  transform: rotate(-5deg);
+  text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+ol li:hover::before {
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.15);
+}
+
+.SelectedWork__card {
+  height: 450px;
+  margin: 0px 0px 100px 0px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.SelectedWork__card:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.99);
+  box-shadow: rgb(38, 57, 77) 0px 12px 22px -10px;
+}
+
+.SelectedWork__container {
+   display: flex;
+   height: 100%;
+}
+
+
+ol li:nth-of-type(4n + 1) .SelectedWork__card {
+  background-color: #74a7e5;
+}
+
+ol li:nth-of-type(4n + 2) .SelectedWork__card {
+  background-color: #E87DAD;
+}
+
+ol li:nth-of-type(4n + 3) .SelectedWork__card {
+  background-color: #9b8dcc;
+}
+
+ol li:nth-of-type(4n + 4) .SelectedWork__card {
+  background-color: #ea7975;
+}
+
+/* CHIP */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+ .md-chip {
+   display: inline-block;
+   background: #585e61;
+   padding: 0 8px;
+   line-height: 200%;
+   border-radius: 32px;
+   border: .5px solid #616161;
+   padding-top: 2px;
+   font-size: 12px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+}
+ .md-chips .md-chip {
+   margin: 3px 5px 3px 0;
+}
+
+.links {
+  width: auto;
+  text-align: right;
+  font-size: 1.1em;
+}
+
+.links a {
+  margin-bottom: 6px;
+   float:right;
+    clear:both;
+}
+
+.SelectedWord__description {
+  line-height: 115%;
+  font-size: 1.3em;
+  max-height: 173px;
+  overflow: scroll
+}
+
+/* Underline link */
+
+/* Underline styles */
+.underline_link {
+  display: inline-block;
+  position: relative;
+  padding: 0.2em 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  width: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Fade in */
+.underline_link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.underline_link:hover::after,
+.underline_link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+.underline_link {
+  overflow: hidden;
+}
+
+.underline_link::after {
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.underline_link:hover::after,
+.underline_link:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  height: 100%;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+  height: 100%;
+}
+
+.SelectedWord__information {
+  padding: 36px 0px;
+}
+
+@media screen and (max-width: 1000px) {
+  .row {
+    display: block;
+  }
+
+.SelectedWork__card {
+  height: auto;
+  padding: 12px 24px;
+}
+}
+
+@media screen and (max-width: 730px) {
+.Home {
+  margin: 4em 0px;
+  width: 100%;
+  margin-bottom: 25vh;
+}
+}
+
+
+@media screen and (max-width: 575px) {
+ol li::before {
+  display: none;
+}
+
+.SelectedWord__information {
+  padding-bottom: 0px;
+}
+
+.links a {
+  margin-bottom: 12px;
+  font-size: 1.2em;
+}
+}
