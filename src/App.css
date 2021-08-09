@@ -12,6 +12,7 @@ ul {
   display: flex;
   justify-content: space-around;
 }
+
 ul li a {
   text-decoration: none;
   color: #fff;
@@ -96,19 +97,13 @@ li > .active {
 }
 
 html {
-  background-color: #78ccac;
+  background-color: #1D2134;
 }
 
 main {
   margin: 0 auto;
   width: 75%;
   max-width: 1000px;
-}
-
-footer {
-  background-color: #64ab90;
-  height: 400px;
-  width: 100%;
 }
 
 img {
@@ -146,6 +141,17 @@ body {
   overscroll-behavior-y: none;
 }
 
+  .announcement {
+    background-color: #6130DA;
+    padding: .25em 4em;
+    text-align: center;
+    }
+
+    .announcement p a {
+      color: white;
+    }
+
+
 #root {
   overflow: hidden;
 }
@@ -167,4 +173,139 @@ body {
 .icon-bar {
   display: none;
 }
+}
+
+footer {
+  background-color: #2b2f4b;
+  text-align: center;
+}
+
+.footer-wrapper {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1000px;
+  padding: 4em 0px;
+}
+
+.footer-links {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 2.0em;
+  font-size: 125%;
+  justify-items: center;
+  padding: 0px;
+}
+
+@media (max-width: 575px) {
+  .footer-links {
+    grid-auto-flow: row;
+    grid-gap: 2em;
+  }
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.footer-links li:hover ~  li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+/* below is just for demo styling */
+
+.footer-links-wrapper {
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.blockquote {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  opacity: .7;
+}
+.blockquote p {
+  font-weight: 700px;
+  text-align: center;
+}
+
+/*blockquote p::before {
+  content: "\f095"; 
+  font-family: FontAwesome;
+ display: inline-block;
+ padding-right: 6px;
+ vertical-align: middle;
+font-size: 180px;
+}*/
+
+.blockquote:before {
+position: absolute;
+font-family: 'FontAwesome';
+top: 0px;
+left: 50px;
+content:"\f10d";
+font-size: 150px;
+color: rgba(0,0,0,0.1);
+ 
+}
+
+.blockquote::after {
+  content: "";
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  height: 3px;
+  width: 200px;
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./fonts/josefin-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/josefin-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-700 - latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('./fonts/josefin-sans-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/josefin-sans-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* abril-fatface-regular - latin */
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('./fonts/abril-fatface-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/abril-fatface-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

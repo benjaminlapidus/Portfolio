@@ -6,7 +6,7 @@ h1 {
 
 h2 {
   font-size: 3.5em;
-  color: #ea7975;
+  color: #DA2F51;
   font-family: "OPTIPeach", serif;
 }
 
@@ -22,29 +22,65 @@ h4 {
   font-size: 3.5em;
 }
 
+figcaption {
+  color: white;
+  font-size: 80%;
+  text-align: center;
+}
+
 .Home {
   margin: 4em 0px;
   width: 50%;
-  margin-bottom: 25vh;
+  margin-bottom: 15vh;
 }
 
 .home__description {
   margin: 2em 0px;
 }
 
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  padding-top: 10em;
+  padding-left: 12em;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.case-study {
+  cursor:not-allowed;
+  pointer-events: none;
+  color:rgba(255, 255, 255, 0.5) !important;
+}
+
 p {
   margin: 24px 0px;
   font-size: 1.2em;
   line-height: 1.4;
+  color: #fff;
 }
 
 span {
-  color: #ea7975;
+  color: #DA2F51;
   font-weight: bold;
 }
 
 .btn-1 {
-  background-color: #ea7975;
+  background-color: #DA2F51;
   color: #fff;
   cursor: pointer;
   font-size: 1em;
@@ -55,18 +91,14 @@ span {
   width: auto;
   position: relative;
   text-decoration: none;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-.button-wrapper {
-  margin-top: 64px;
+  box-shadow: rgb(10, 10, 10) 0px 20px 30px -10px;
 }
 
 .btn-1:hover {
   transition: all 0.5s;
   border-radius: 10px;
   transform: scale(0.98);
-  box-shadow: rgb(38, 57, 77) 0px 12px 22px -10px;
+  box-shadow: rgb(10, 10, 10) 0px 12px 22px -10px;
 }
 
 .button-icon {
@@ -79,19 +111,19 @@ span {
 
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 
-ol {
+.numberAccentWrapper {
   list-style: none;
   counter-reset: my-awesome-counter;
   margin: 0;
   padding: 0;
 }
-ol li {
+.numberAccentWrapper li {
   counter-increment: my-awesome-counter;
   font-size: 0.8rem;
   color: white;
   margin-bottom: 0.5rem;
 }
-ol li::before {
+.numberAccentWrapper li::before {
   content: "" counter(my-awesome-counter);
   font-weight: bold;
   position: absolute;
@@ -100,29 +132,28 @@ ol li::before {
   margin-left: -8rem;
   font-family: "Abril Fatface", serif;
   line-height: 450px;
-  color: #5a9981;
+  color: #2C2F4B;
   transform: rotate(-5deg);
   text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
 }
 
-ol li:hover::before {
+.numberAccentWrapper li:hover::before {
   text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.15);
 }
 
 .SelectedWork__card {
-  height: 450px;
   margin: 0px 0px 100px 0px;
-  padding: 12px 24px;
+  padding: 2em 5em;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(10, 10, 10) 0px 20px 30px -10px;
 }
 
 .SelectedWork__card:hover {
   transition: all 0.5s ease-in-out;
   transform: scale(0.99);
-  box-shadow: rgb(38, 57, 77) 0px 12px 22px -10px;
+  box-shadow: rgb(10, 10, 10) 0px 12px 22px -10px;
 }
 
 .SelectedWork__container {
@@ -132,19 +163,23 @@ ol li:hover::before {
 
 
 ol li:nth-of-type(4n + 1) .SelectedWork__card {
-  background-color: #74a7e5;
+  background-color: #BE2FDA;
+  box-shadow: 0px 0px 20px #be2fda83;
 }
 
 ol li:nth-of-type(4n + 2) .SelectedWork__card {
-  background-color: #E87DAD;
+  background-color: #622FDA;
+  box-shadow: 0px 0px 20px #622FDA83;
 }
 
 ol li:nth-of-type(4n + 3) .SelectedWork__card {
-  background-color: #9b8dcc;
+  background-color: #DA2F51;
+  box-shadow: 0px 0px 20px #DA2F5183;
 }
 
 ol li:nth-of-type(4n + 4) .SelectedWork__card {
-  background-color: #ea7975;
+  background-color: #16836D;
+  box-shadow: 0px 0px 20px #16836D83;
 }
 
 /* CHIP */
@@ -181,8 +216,6 @@ ol li:nth-of-type(4n + 4) .SelectedWork__card {
 .SelectedWord__description {
   line-height: 115%;
   font-size: 1.3em;
-  max-height: 173px;
-  overflow: scroll
 }
 
 /* Underline link */
@@ -254,20 +287,38 @@ ol li:nth-of-type(4n + 4) .SelectedWork__card {
   flex-basis: 100%;
   flex: 2;
   height: 100%;
+  max-width:300px;
+  margin: auto;
 }
 
 .SelectedWord__information {
   padding: 36px 0px;
+  margin-left: 48px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .row {
     display: block;
   }
 
+  .double-column {
+    max-width:300px;
+  }
+
+
+.SelectedWord__information {
+  margin-left: 0px;
+}
+
+
+
+
 .SelectedWork__card {
   height: auto;
   padding: 12px 24px;
+}
+#hide-on-small {
+  display: none !important;
 }
 }
 
@@ -275,7 +326,7 @@ ol li:nth-of-type(4n + 4) .SelectedWork__card {
 .Home {
   margin: 4em 0px;
   width: 100%;
-  margin-bottom: 25vh;
+  margin-bottom: 10vh;
 }
 }
 
@@ -283,6 +334,10 @@ ol li:nth-of-type(4n + 4) .SelectedWork__card {
 @media screen and (max-width: 575px) {
 ol li::before {
   display: none;
+}
+
+#hide-on-small {
+  display: none !important;
 }
 
 .SelectedWord__information {

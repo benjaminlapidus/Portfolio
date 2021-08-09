@@ -1,6 +1,5 @@
 import React, { Component, useEffect } from "react";
 import "aos/dist/aos.css";
-import Badge from 'react-bootstrap/Badge'
 import AOS from "aos";
 
 import "./Home.css";
@@ -10,13 +9,16 @@ function Home() {
     AOS.init({
       duration: 250,
       disable: "mobile",
-      offset: 25,
+      offset: 0,
       easing: "ease-in-out-quart",
     });
   }, []);
   return (
     <div>
-      <div className="Home">
+
+
+<div class="row">
+  <div class="column left Home">
         <h1>Hi there!</h1>
         <h2>I'm Ben.</h2>
         <div className="home__description">
@@ -25,8 +27,8 @@ function Home() {
             double major in computer science and economics.
           </p>
           <p>
-            Currently an intern <span>@GeneralMotors</span> helping to develop
-            the best in-car speech recognition tools.
+            Currently an intern <span>@GeneralMotors</span> helping to develop tools
+            to create the best in-car speech recognition.
           </p>
         </div>
         <p className="button-wrapper">
@@ -34,13 +36,20 @@ function Home() {
             Check out my work<i className="button-icon fa fa-chevron-left"></i>
           </a>
         </p>
-      </div>
+  </div>
+  <div id="hide-on-small" className="column right">
+  <figure >
+  <img className="hero-img" style={{height: "350px"}} src={require("./../../img/abstract.png").default}/>
+  </figure>
+
+  </div>
+</div>
 
       <article className="SelectedWork">
         <a id="work"></a>
         <h3>Selected Work</h3>
-        <ol>
-          <li>
+        <ol class="numberAccentWrapper">
+        <li>
             {" "}
             <div data-aos="fade-up">
               <section className="SelectedWork__card">
@@ -48,88 +57,7 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
-                    </div>
-                    <div className="column SelectedWord__information">
-                      <h4>Rock On</h4>
-                      <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">CSS</div>
-                        <div class="md-chip">JavaScript</div>
-                        <div class="md-chip">JSX</div>
-                        <div class="md-chip">Personal Project</div>
-                      </div>
-                      <p className="SelectedWord__description">
-                        Rock On is a web-based quiz that allows users to sign
-                        into their Spotify account. Then,{" "}
-                        <strike> thanks to hours of work</strike> automagically,
-                        a custom quiz is generated based on the user's listening
-                        habits.
-                      </p>
-                      <div className="links">
-                        
-                        <a className="underline_link" href="https://github.com/bashcorp/spotifyquiz">
-                          Source Code →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </li>
-          <li>
-            {" "}
-            <div data-aos="fade-up">
-              <section className="SelectedWork__card">
-                <div className="SelectedWork__container">
-                  <div className="row">
-                    <div className="double-column">
-                      <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
-                    </div>
-                    <div className="column SelectedWord__information">
-                      <h4>Typerspace</h4>
-                      <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">CSS</div>
-                        <div class="md-chip">JavaScript</div>
-
-                        <div class="md-chip">Heroku</div>
-                        <div class="md-chip">Hackathon</div>
-                      </div>
-                      <p className="SelectedWord__description">
-                        j - f - j - f - j - f - j - f - j - f...
-                        <br />
-                        <br />
-                        Practicing typing is mundane and boring. Typerspace
-                        modernizes typing practice by allowing users to train
-                        alongside their favorite YouTube videos.
-                      </p>
-                      <div className="links">
-                        
-                        <a className="underline_link" href="https://github.com/benjaminlapidus/typerspace">
-                          Source Code →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </li>
-          <li>
-            {" "}
-            <div data-aos="fade-up">
-              <section className="SelectedWork__card">
-                <div className="SelectedWork__container">
-                  <div className="row">
-                    <div className="double-column">
-                      <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
+                         src={require("./../../img/park-viz-logo.png").default}/>
                     </div>
                     <div className="column SelectedWord__information">
                       <h4>PARK Viz</h4>
@@ -172,7 +100,8 @@ function Home() {
               </section>
             </div>
           </li>
-          <li>
+          
+         {/*} <li>
             {" "}
             <div data-aos="fade-up">
               <section className="SelectedWork__card">
@@ -180,33 +109,29 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
+                        src={require("./../../img/profile-revolutionary.png").default}/>
                     </div>
                     <div className="column SelectedWord__information">
-                      <h4>E.T.M.S.</h4>
+                      <h4>Typerspace</h4>
                       <div className="md-chips">
                         <div class="md-chip">React</div>
-                        <div class="md-chip">Full-stack</div>
                         <div class="md-chip">CSS</div>
-                        <div class="md-chip">Java Spring</div>
-                        <div class="md-chip">Hibernate</div>
+                        <div class="md-chip">JavaScript</div>
+
+                        <div class="md-chip">Heroku</div>
+                        <div class="md-chip">Hackathon</div>
                       </div>
                       <p className="SelectedWord__description">
-                        The Employee Training Management System is an internal
-                        tool developed for the Clerk's Office at the U.S.
-                        Bankruptcy Court. It maintained a log of training
-                        courses, individual training records, and multiple
-                        access levels (plus dark mode!)
+                        j - f - j - f - j - f - j - f - j - f...
+                        <br />
+                        <br />
+                        Practicing typing is mundane and boring. Typerspace
+                        modernizes typing practice by allowing users to train
+                        alongside their favorite YouTube videos.
                       </p>
                       <div className="links">
-                        <a className="underline_link" href="www.google.com">
-                          Case Study →
-                        </a>
-                        <a
-                          className="underline_link"
-                          href="https://github.com/benjaminlapidus/ETMS-v2"
-                        >
+                        
+                        <a className="underline_link" href="https://github.com/benjaminlapidus/typerspace">
                           Source Code →
                         </a>
                       </div>
@@ -216,6 +141,8 @@ function Home() {
               </section>
             </div>
           </li>
+          */}
+          
           <li>
             {" "}
             <div data-aos="fade-up">
@@ -224,8 +151,41 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
+                         src={require("./../../img/banana-homepage.png").default}/>
+                    </div>
+                    <div className="column SelectedWord__information">
+                      <h4>NuclearNana</h4>
+                      <div className="md-chips">
+                        <div class="md-chip">Web development</div>
+                        <div class="md-chip">React</div>
+                        <div class="md-chip">Side project</div>
+                        <div class="md-chip">Work in progress</div>
+                      </div>
+                      <p className="SelectedWord__description">
+                        A chest x-ray exposes patients to about .1 millisieverts. So... what does that mean?
+                        NuclearNana is an interactive experience designed to break down barriers in understanding radiation.
+                      </p>
+                      <div className="links">
+                      <a className="underline_link" href="https://github.com/benjaminlapidus/howmanybananas">
+                          Source Code →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </li>
+
+          <li>
+            {" "}
+            <div data-aos="fade-up">
+              <section className="SelectedWork__card">
+                <div className="SelectedWork__container">
+                  <div className="row">
+                    <div className="double-column">
+                      <img
+                         src={require("./../../img/dr-chatbot-logo_transparent.png").default}/>
                     </div>
                     <div className="column SelectedWord__information">
                       <h4>Complete & Compete</h4>
@@ -239,7 +199,7 @@ function Home() {
                         to complete a daily health screening.
                       </p>
                       <div className="links">
-                        <a className="underline_link" href="www.google.com">
+                        <a className="underline_link case-study" href="#">
                           Case Study →
                         </a>
                         <a
@@ -264,8 +224,7 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
+                         src={require("./../../img/mask-pouch.png").default}/>
                     </div>
                     <div className="column SelectedWord__information">
                       <h4>Mask Pouch</h4>
@@ -274,18 +233,11 @@ function Home() {
                         <div class="md-chip">User Research</div>
                       </div>
                       <p className="SelectedWord__description">
-                        Spot On is a web-based quiz that allows users to sign
-                        into their Spotify account. Then,{" "}
-                        <strike> thanks to hours of work</strike> automagically,
-                        a custom quiz is generated based on the user's listening
-                        habits.
+                        My masks seem to be everywhere — except the laundry. The Mask Pouch is a portable, eco-friendly, and sterile way to carry your mask on the go.
                       </p>
                       <div className="links">
-                        <a className="underline_link" href="www.google.com">
+                        <a className="underline_link case-study" href="#">
                           Case Study →
-                        </a>
-                        <a className="underline_link" href="www.google.com">
-                          Live Demo →
                         </a>
                       </div>
                     </div>
@@ -302,28 +254,73 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png")}
-                      />
+                         src={require("./../../img/profile-court.png").default}/>
                     </div>
                     <div className="column SelectedWord__information">
-                      <h4>NuclearNana</h4>
+                      <h4>E.T.M.S.</h4>
                       <div className="md-chips">
-                        <div class="md-chip">Product Design</div>
-                        <div class="md-chip">User Research</div>
+                        <div class="md-chip">React</div>
+                        <div class="md-chip">Full-stack</div>
+                        <div class="md-chip">CSS</div>
+                        <div class="md-chip">Java Spring</div>
+                        <div class="md-chip">Hibernate</div>
                       </div>
                       <p className="SelectedWord__description">
-                        Spot On is a web-based quiz that allows users to sign
+                        The Employee Training Management System is an internal
+                        tool developed for the Clerk's Office at the U.S.
+                        Bankruptcy Court. It maintained a log of training
+                        courses, individual training records, and multiple
+                        access levels (plus dark mode!)
+                      </p>
+                      <div className="links">
+                        <a className="underline_link case-study" href="#">
+                          Case Study →
+                        </a>
+                        <a
+                          className="underline_link"
+                          href="https://github.com/benjaminlapidus/ETMS-v2"
+                        >
+                          Source Code →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </li>
+        
+          <li>
+            {" "}
+            <div data-aos="fade-up">
+              <section className="SelectedWork__card">
+                <div className="SelectedWork__container">
+                  <div className="row">
+                    <div className="double-column">
+                      <img
+                        src={require("./../../img/profile-revolutionary.png").default}/>
+                    </div>
+                    <div className="column SelectedWord__information">
+                      <h4>Rock On</h4>
+                      <div className="md-chips">
+                        <div class="md-chip">React</div>
+                        <div class="md-chip">CSS</div>
+                        <div class="md-chip">JavaScript</div>
+                        <div class="md-chip">JSX</div>
+                        <div class="md-chip">Side Project</div>
+                        <div class="md-chip">Work in progress</div>
+                      </div>
+                      <p className="SelectedWord__description">
+                        Rock On is a web-based quiz that allows users to sign
                         into their Spotify account. Then,{" "}
                         <strike> thanks to hours of work</strike> automagically,
                         a custom quiz is generated based on the user's listening
                         habits.
                       </p>
                       <div className="links">
-                        <a className="underline_link" href="www.google.com">
-                          Case Study →
-                        </a>
-                        <a className="underline_link" href="www.google.com">
-                          Live Demo →
+                        
+                        <a className="underline_link" href="https://github.com/bashcorp/spotifyquiz">
+                          Source Code →
                         </a>
                       </div>
                     </div>
