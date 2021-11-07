@@ -29,20 +29,17 @@ function App() {
 
   return (
     <div>
-      <div className="announcement">
+      {/* <div className="announcement">
         <p>Welcome to my portfolio reimagined! I just couldn't wait to replace <a href="https://benlapid.us/old">v1</a> so hold tight as I finish polishing my case studies!</p>
-      </div>
+      </div> */}
       <div className="App" id="main-container">
         <Router basename={'/'}>
           <main>
-
 
             <nav>
               <NavLink className="logo" exact to="/">
                 {/*<img src={require("./img/logo.svg").default}/>*/}
               </NavLink>
-
-
 
               <ul className="nav__pages center">
                 {/*<li>
@@ -60,15 +57,18 @@ function App() {
 
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/rock-on" component={RockOn} />
-              <Route path="/typerspace" component={Typerspace} />
-              <Route path="/park-test" component={ParkTest} />
-              <Route path="/etms" component={Etms} />
-              <Route path="/complete-and-compete" component={CompleteAndCompete} />
-              <Route path="/design" component={Design} />
-              <Route path="/mask-pouch" component={MaskPouch} />
-              <Route path="/contact" component={Contact} />
+              <body>
+                <Route path="/about" component={About} />
+                <Route path="/rock-on" component={RockOn} />
+                <Route path="/typerspace" component={Typerspace} />
+                <Route path="/park-test" component={ParkTest} />
+                <Route path="/etms" component={Etms} />
+                <Route path="/complete-and-compete" component={CompleteAndCompete} />
+                <Route path="/design" component={Design} />
+                <Route path="/mask-pouch" component={MaskPouch} />
+                <Route path="/contact" component={Contact} />
+              </body>
+
             </Switch>
           </main>
 

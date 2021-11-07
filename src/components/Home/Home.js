@@ -15,41 +15,39 @@ function Home() {
   }, []);
   return (
     <div>
-
-
-<div class="row">
-  <div class="column left Home">
-        <h1>Hi there!</h1>
-        <h2>I'm Ben.</h2>
-        <div className="home__description">
+      <div className="row">
+        <div className="column left Home">
+          <h1>Hi there!</h1>
+          <h2>I'm Ben.</h2>
+          <div className="home__description">
+            <p>
+              I'm a senior <span>@TheUniversityOfRochester</span> pursuing a
+              double major in computer science and economics.
+            </p>
+            <p>
+              Recently completed an internship <span>@GeneralMotors</span> helping to
+              create the best in-car speech recognition.
+            </p>
+          </div>
           <p>
-            I'm a senior <span>@TheUniversityOfRochester</span> pursuing a
-            double major in computer science and economics.
-          </p>
-          <p>
-            Currently an intern <span>@GeneralMotors</span> helping to develop tools
-            to create the best in-car speech recognition.
+            <a href="#work" className="btn-1">
+              Check out my work<i className="button-icon fa fa-chevron-left"></i>
+            </a>
           </p>
         </div>
-        <p className="button-wrapper">
-          <a href="#work" className="btn-1">
-            Check out my work<i className="button-icon fa fa-chevron-left"></i>
-          </a>
-        </p>
-  </div>
-  <div id="hide-on-small" className="column right">
-  <figure >
-  <img className="hero-img" style={{height: "350px"}} src={require("./../../img/abstract.png").default}/>
-  </figure>
+        <div id="hide-on-small" className="column right">
+          <figure >
+            <img className="hero-img" style={{ height: "350px" }} alt="Abstract semi-transparent, purple and blue orb" src={require("./../../img/abstract.webp").default} />
+          </figure>
 
-  </div>
-</div>
+        </div>
+      </div>
 
       <article className="SelectedWork">
         <a id="work"></a>
         <h3>Selected Work</h3>
-        <ol class="numberAccentWrapper">
-        <li>
+        <ol className="numberAccentWrapper">
+          <li>
             {" "}
             <div data-aos="fade-up">
               <section className="SelectedWork__card">
@@ -57,13 +55,88 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                         src={require("./../../img/park-viz-logo.png").default}/>
+                        src={require("./../../img/GM-logo.webp").default} alt="General Motors logo" />
+                    </div>
+                    <div className="column SelectedWord__information">
+                      <h4>Automated Audio Validation</h4>
+                      <div className="md-chips">
+                        <div className="md-chip">JavaScript</div>
+                        <div className="md-chip">Perl</div>
+                        <div className="md-chip">Bootstrap</div>
+                        <div className="md-chip">ChartJS</div>
+                        <div className="md-chip">SQL</div>
+                      </div>
+                      <p className="SelectedWord__description">
+                        During an internship at General Motors, I created a tool to validation over 1.2 million audio files to clean a database valued at several million dollars. Although the details of the project are confidential, my role persisted through the entire process. From interviewing stakeholders to outlining requirements to building the front and backend.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </li>
+          <li>
+            {" "}
+            <div data-aos="fade-up">
+              <section className="SelectedWork__card">
+                <div className="SelectedWork__container">
+                  <div className="row">
+                    <div className="double-column">
+                      <img
+                        src={require("./../../img/sa.webp").default} alt="Student association logo" />
+                    </div>
+                    <div className="column SelectedWord__information">
+                      <h4>Student Government Redesign</h4>
+                      <div className="md-chips">
+
+                        <div className="md-chip">PHP</div>
+                        <div className="md-chip">JavaScript</div>
+                        <div className="md-chip">jQuery</div>
+                        <div className="md-chip">Web Design</div>
+                        <div className="md-chip">HTML</div>
+                        <div className="md-chip">CSS</div>
+                        <div className="md-chip">Bootstrap</div>
+                        <div className="md-chip">Wordpress</div>
+                      </div>
+                      <p className="SelectedWord__description">
+                        I'm currently redesigning and building a new website for the student association at the University of Rochester. I designed and built a custom Wordpress theme and I'm pushing for release by the end of the semester. In the meantime, check out some early iterations.
+                      </p>
+                      <div className="links">
+                        <a className="underline_link" rel="noreferrer" target="_blank" href="https://www.figma.com/file/pjaefT344DOd3dczlXTTS8/SA_Redesign?node-id=0%3A1">
+                          Wireframe →
+                        </a>
+                        <a className="underline_link" rel="noreferrer" target="_blank" href="https://benlapidus.digitalscholar.rochester.edu/sa_redesign/html/">
+                          Low fidelity prototype →
+                        </a>
+                        <a className="underline_link case-study" href="#">
+                          Deployed →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </li>
+
+
+
+          <li>
+            {" "}
+            <div data-aos="fade-up">
+              <section className="SelectedWork__card">
+                <div className="SelectedWork__container">
+                  <div className="row">
+                    <div className="double-column">
+                      <img
+                        src={require("./../../img/park-viz-logo.webp").default} alt="Logo of a minimalistic leaf inside a circle" />
                     </div>
                     <div className="column SelectedWord__information">
                       <h4>PARK Viz</h4>
                       <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">Product Design</div>
+                        <div className="md-chip">React</div>
+                        <div className="md-chip">Product Design</div>
                       </div>
                       <p className="SelectedWord__description">
                         PARK Viz is a contribution to the PARK Study at the
@@ -73,21 +146,21 @@ function Home() {
                       </p>
                       <div className="links">
                         <a
-                          className="underline_link"
+                          className="underline_link" rel="noreferrer"
                           target="_blank"
                           href="https://sites.google.com/u.rochester.edu/park-viz/home?authuser=0"
                         >
                           Case Study + Demo →
                         </a>
                         <a
-                          className="underline_link"
+                          className="underline_link" rel="noreferrer"
                           target="_blank"
                           href="https://github.com/park-viz/park-viz"
                         >
                           Source Code →
                         </a>
                         <a
-                          className="underline_link"
+                          className="underline_link" rel="noreferrer"
                           target="_blank"
                           href="https://parktest.net/about.html"
                         >
@@ -100,49 +173,6 @@ function Home() {
               </section>
             </div>
           </li>
-          
-         {/*} <li>
-            {" "}
-            <div data-aos="fade-up">
-              <section className="SelectedWork__card">
-                <div className="SelectedWork__container">
-                  <div className="row">
-                    <div className="double-column">
-                      <img
-                        src={require("./../../img/profile-revolutionary.png").default}/>
-                    </div>
-                    <div className="column SelectedWord__information">
-                      <h4>Typerspace</h4>
-                      <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">CSS</div>
-                        <div class="md-chip">JavaScript</div>
-
-                        <div class="md-chip">Heroku</div>
-                        <div class="md-chip">Hackathon</div>
-                      </div>
-                      <p className="SelectedWord__description">
-                        j - f - j - f - j - f - j - f - j - f...
-                        <br />
-                        <br />
-                        Practicing typing is mundane and boring. Typerspace
-                        modernizes typing practice by allowing users to train
-                        alongside their favorite YouTube videos.
-                      </p>
-                      <div className="links">
-                        
-                        <a className="underline_link" href="https://github.com/benjaminlapidus/typerspace">
-                          Source Code →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </li>
-          */}
-          
           <li>
             {" "}
             <div data-aos="fade-up">
@@ -151,59 +181,28 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                         src={require("./../../img/banana-homepage.png").default}/>
-                    </div>
-                    <div className="column SelectedWord__information">
-                      <h4>NuclearNana</h4>
-                      <div className="md-chips">
-                        <div class="md-chip">Web development</div>
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">Side project</div>
-                        <div class="md-chip">Work in progress</div>
-                      </div>
-                      <p className="SelectedWord__description">
-                        A chest x-ray exposes patients to about .1 millisieverts. So... what does that mean?
-                        NuclearNana is an interactive experience designed to break down barriers in understanding radiation.
-                      </p>
-                      <div className="links">
-                      <a className="underline_link" href="https://github.com/benjaminlapidus/howmanybananas">
-                          Source Code →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </li>
-
-          <li>
-            {" "}
-            <div data-aos="fade-up">
-              <section className="SelectedWork__card">
-                <div className="SelectedWork__container">
-                  <div className="row">
-                    <div className="double-column">
-                      <img
-                         src={require("./../../img/dr-chatbot-logo_transparent.png").default}/>
+                        src={require("./../../img/dr-chatbot-logo_transparent.webp").default} alt="Shield reading Complete and Compete Dr. Chat Bot in front of coronavirus images" />
                     </div>
                     <div className="column SelectedWord__information">
                       <h4>Complete & Compete</h4>
                       <div className="md-chips">
-                        <div class="md-chip">Big Data</div>
-                        <div class="md-chip">Web Development</div>
+                        <div className="md-chip">Big Data</div>
+                        <div className="md-chip">HTML</div>
+                        <div className="md-chip">CSS</div>
+                        <div className="md-chip">Foundation 5</div>
+
                       </div>
                       <p className="SelectedWord__description">
-                        Amid the coronavirus pandemic, the Complete & Compete
+                        Amid the coronavirus pandemic, I helped to Complete & Compete
                         challenge was a program designed to incentivize students
-                        to complete a daily health screening.
+                        to complete a daily health screening. I was responsible for all things digital; created weekly reports summarizing 10,000+ screening results, designed and created the website, and built a weighted randomizer to draw names.
                       </p>
                       <div className="links">
-                        <a className="underline_link case-study" href="#">
-                          Case Study →
+                        <a className="underline_link" rel="noreferrer" target="_blank" href="./assets/C&C-Program-Summary.pdf">
+                          Summary →
                         </a>
                         <a
-                          className="underline_link"
+                          className="underline_link" rel="noreferrer"
                           target="_blank"
                           href="https://www.rochester.edu/college/wcsa/programs/complete-and-compete.html"
                         >
@@ -224,62 +223,24 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                         src={require("./../../img/mask-pouch.png").default}/>
+                        src={require("./../../img/banana-homepage.webp").default}
+                        alt="Colorful website displayed on laptop monitor"
+                      />
                     </div>
                     <div className="column SelectedWord__information">
-                      <h4>Mask Pouch</h4>
+                      <h4>NuclearNana</h4>
                       <div className="md-chips">
-                        <div class="md-chip">Product Design</div>
-                        <div class="md-chip">User Research</div>
+                        <div className="md-chip">Web development</div>
+                        <div className="md-chip">React</div>
+                        <div className="md-chip">Side project</div>
+                        <div className="md-chip">Work in progress</div>
                       </div>
                       <p className="SelectedWord__description">
-                        My masks seem to be everywhere — except the laundry. The Mask Pouch is a portable, eco-friendly, and sterile way to carry your mask on the go.
+                        A chest x-ray exposes patients to about .1 millisieverts. So... what does that mean?
+                        NuclearNana is an interactive experience designed to break down barriers in understanding radiation.
                       </p>
                       <div className="links">
-                        <a className="underline_link case-study" href="#">
-                          Case Study →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </li>
-          <li>
-            {" "}
-            <div data-aos="fade-up">
-              <section className="SelectedWork__card">
-                <div className="SelectedWork__container">
-                  <div className="row">
-                    <div className="double-column">
-                      <img
-                         src={require("./../../img/profile-court.png").default}/>
-                    </div>
-                    <div className="column SelectedWord__information">
-                      <h4>E.T.M.S.</h4>
-                      <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">Full-stack</div>
-                        <div class="md-chip">CSS</div>
-                        <div class="md-chip">Java Spring</div>
-                        <div class="md-chip">Hibernate</div>
-                      </div>
-                      <p className="SelectedWord__description">
-                        The Employee Training Management System is an internal
-                        tool developed for the Clerk's Office at the U.S.
-                        Bankruptcy Court. It maintained a log of training
-                        courses, individual training records, and multiple
-                        access levels (plus dark mode!)
-                      </p>
-                      <div className="links">
-                        <a className="underline_link case-study" href="#">
-                          Case Study →
-                        </a>
-                        <a
-                          className="underline_link"
-                          href="https://github.com/benjaminlapidus/ETMS-v2"
-                        >
+                        <a className="underline_link" rel="noreferrer" target="_blank" href="https://github.com/benjaminlapidus/howmanybananas">
                           Source Code →
                         </a>
                       </div>
@@ -289,7 +250,6 @@ function Home() {
               </section>
             </div>
           </li>
-        
           <li>
             {" "}
             <div data-aos="fade-up">
@@ -298,28 +258,32 @@ function Home() {
                   <div className="row">
                     <div className="double-column">
                       <img
-                        src={require("./../../img/profile-revolutionary.png").default}/>
+                        src={require("./../../img/profile-court.webp").default}
+                        alt="Brown webpage with government logo displayed on desktop monitor"
+                      />
+
                     </div>
                     <div className="column SelectedWord__information">
-                      <h4>Rock On</h4>
+                      <h4>E.T.M.S.</h4>
                       <div className="md-chips">
-                        <div class="md-chip">React</div>
-                        <div class="md-chip">CSS</div>
-                        <div class="md-chip">JavaScript</div>
-                        <div class="md-chip">JSX</div>
-                        <div class="md-chip">Side Project</div>
-                        <div class="md-chip">Work in progress</div>
+                        <div className="md-chip">React</div>
+                        <div className="md-chip">Full-stack</div>
+                        <div className="md-chip">CSS</div>
+                        <div className="md-chip">Java Spring</div>
+                        <div className="md-chip">Hibernate</div>
                       </div>
                       <p className="SelectedWord__description">
-                        Rock On is a web-based quiz that allows users to sign
-                        into their Spotify account. Then,{" "}
-                        <strike> thanks to hours of work</strike> automagically,
-                        a custom quiz is generated based on the user's listening
-                        habits.
+                        The Employee Training Management System is an internal
+                        tool developed for the Clerk's Office at the U.S.
+                        Bankruptcy Court. It maintained a log of training
+                        courses, individual training records, and multiple
+                        access levels (plus dark mode!)
                       </p>
                       <div className="links">
-                        
-                        <a className="underline_link" href="https://github.com/bashcorp/spotifyquiz">
+                        <a
+                          className="underline_link" rel="noreferrer" target="_blank"
+                          href="https://github.com/benjaminlapidus/ETMS-v2"
+                        >
                           Source Code →
                         </a>
                       </div>

@@ -17,6 +17,7 @@
     "static/media/App.css": "/new/static/media/OPTIPeach-Gras.f9ddf10b.woff",
     "static/media/logo.svg": "/new/static/media/logo.f5962981.svg",
     "static/media/profile-revolutionary.png": "/new/static/media/profile-revolutionary.3ba58077.png"
+  },
   "entrypoints": [
     "static/js/runtime-main.bcb744fb.js",
     "static/css/2.7fc9bc2b.chunk.css",
