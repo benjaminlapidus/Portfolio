@@ -1,0 +1,104 @@
+/* Write your global styles here, in PostCSS syntax */
+
+@import '@fontsource/fira-mono';
+
+:root {
+    --bg: #fcfcfc;
+    --accent-primary: #1c2334;
+    --accent-secondary: #6B39C0;
+  }
+
+  body {
+      background-color: var(--bg);
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+  }
+
+  @layer utilities {
+    @variants responsive {
+        .masonry-3-col {
+            column-count: 3;
+            column-gap: 1em;
+        }
+        .masonry-2-col {
+            column-count: 2;
+            column-gap: 1em;
+        }
+        .break-inside {
+            break-inside: avoid;
+        }
+    }  
+}
+  
+
+@tailwind base;
+
+@layer base {
+    h1 {
+      @apply text-6xl md:text-8xl font-secondary;
+    }
+    h2 {
+      @apply text-2xl;
+    }
+    h3 {
+        @apply text-3xl font-bold mt-1 capitalize;
+    }
+    img {
+        @apply my-10;
+    }
+    p {
+        @apply my-5;
+    }
+
+    blockquote {
+        @apply font-bold my-10 relative p-8 text-lg border-l-4 accent-primary-bg text-neutral-100 border-neutral-100;
+    }
+}
+
+.bg-bg {
+    background-color: var(--bg);
+}
+
+.project-small {
+    min-height: 300px;
+}
+
+.project-big {
+    min-height: 600px;
+}
+
+.accent-primary-bg {
+    background-color: var(--accent-primary);
+}
+
+.accent-secondary-bg {
+    background-color: var(--accent-secondary);
+}
+
+.accent-primary {
+    color: var(--accent-primary);
+}
+
+.accent-secondary {
+    color: var(--accent-secondary)
+}
+
+.slate-bg {
+    background-color: #4C5767;
+}
+
+.font-primary {
+    font-family: 'League Spartan';
+    font-weight: 400;
+}
+
+.font-secondary {
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    line-height: .85 !important;
+}
+
+@tailwind components;
+
+@tailwind utilities;
